@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Farming</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #2b5e2c;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      margin: 0 20px;
+    }
+
+    .search-bar input {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      width: 70%;
+    }
+
+    .language-section {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      background-color: #3d7c3f;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .banner {
+      background-color: #e8f4e8;
+      padding: 20px;
+      text-align: center;
+      color: #2b5e2c;
+    }
+
+    .banner h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 14px;
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .left-panel {
+      width: 20%;
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .left-panel h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .right-panel {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .card {
+      width: 30%;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .card h4 {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .card-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background-color: #2b5e2c;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: #ff3b3b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><h1>Contract Farming</h1></div>
+      <div class="search-bar">
+        <input type="text" placeholder="Hinted search text">
+      </div>
+      <div class="language-section">
+        <button class="btn btn-primary">Farmer Login</button>
+        <button class="btn btn-primary">Buyer Login</button>
+        <div>🌐 English</div>
+      </div>
+    </nav>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Become a Contract Farmer</a>
+      <a href="#">Become a Buyer</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+  </header>
+  <section class="banner">
+    <h2>Get Assured Prices For Your Produce With Contract Farming</h2>
+    <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+  </section>
+  <main class="main-content">
+    <aside class="left-panel">
+      <p>Promotions</p     >
+        <p>INSURANCE <br>(FASAL BIMA)</p>                                  
+    </aside>
+    <div class="right-panel">
+      <section>
+        <div class="section-title">Contracts For Farmers</div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="onion.png" alt="Onion Seeds">
+            <h4>Onion Seeds</h4>
+            <p>12 Acres</p>
+          </div>
+          <div class="card">
+            <img src="poultry.png" alt="Poultry Farm">
+            <h4>Poultry Farm</h4>
+            <p>10 Acres</p>
+          </div>
+          <div class="card">
+            <img src="fish.png" alt="Fish Farming">
+            <h4>Fish Farming</h4>
+            <p>30 Acres</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        
+        <div class="section-title">Lands Available For Contract Farming</div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="uttarpradesh.png" alt="Uttar Pradesh">
+            <h4>Uttar Pradesh</h4>
+            <p>12 Acres</p>
+          </div>
+          <div class="card">
+            <img src="madhyapradesh.png" alt="Madhya Pradesh">
+            <h4>Madhya Pradesh</h4>
+            <p>10 Acres</p>
+          </div>
+          <div class="card">
+            <img src="gujarat.png" alt="Gujarat">
+            <h4>Gujarat</h4>
+            <p>30 Acres</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

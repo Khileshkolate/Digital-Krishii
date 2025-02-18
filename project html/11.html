@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Farming</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #2b5e2c;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.language-icon {
+  font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #3d7c3f;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-details {
+  display: flex;
+  gap: 20px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.details-container {
+  max-width: 400px;
+}
+
+.price {
+  color: #ff3b3b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 12px;
+  color: gray;
+}
+
+.details ul, .description ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details ul li, .description ul li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+</style>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><h1>Contract Farming</h1>/div>
+      <div class="search-bar">
+        <input type="text" placeholder="Hinted search text">
+      </div>
+      <div class="language-icon">🌐 English</div>
+    </nav>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Add Land for Contract</a>
+      <a href="#">Add Land for Selling</a>
+      <a href="#">Add Product for Sale</a>
+      <a href="#">Help</a>
+      <a href="#">About Us</a>
+      <a href="#">Profile</a>
+    </div>
+  </header>
+  <main class="content">
+    <section class="product-details">
+      <div class="image-container">
+        <img src="onion-image-placeholder.png" alt="Onion Seeds" class="product-image">
+        <div class="button-group">
+          <button class="btn">View Full Contract</button>
+          <button class="btn">Apply For Contract</button>
+          <button class="btn">Negotiate Details</button>
+        </div>
+      </div>
+      <div class="details-container">
+        <h1>Onion Seeds</h1>
+        <p>Kharif Crop</p>
+        <p><strong>Contractor Rating and Reviews</strong></p>
+        <p class="price">50,000 per Quintal / 100 Kg</p>
+        <p class="note">Refer to contract for more details</p>
+        <div class="details">
+          <p><strong>Details:</strong></p>
+          <ul>
+            <li>Preferred Soil Type - Black, Red</li>
+            <li>Crop Duration - 4 months</li>
+            <li>Seeding Time - Middle of Nov - Last of December</li>
+          </ul>
+        </div>
+        <div class="description">
+          <p><strong>Description:</strong></p>
+          <ul>
+            <li>Planting - Onion seeds can be planted in late July to September using the seed-to-seed method, or in September to October using the bulb-to-seed method.</li>
+            <li>Pollination - Onion seeds need to be pollinated, usually by honeybees, in clear, warm weather with temperatures between 65°F and 95°F.</li>
+            <li>Harvesting - Mature seeds are usually harvested by hand or machine from mid-June to August of the following year.</li>
+            <li>Drying - The stalks are laid out on tarps and dried for 2–3 weeks.</li>
+            <li>Processing - The umbels are thrashed using combines, and the seed is then cleaned and processed.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

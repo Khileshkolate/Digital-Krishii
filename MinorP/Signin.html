@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+    <script>
+        // Google Sign-In Callback
+        function handleCredentialResponse(response) {
+            const data = jwt_decode(response.credential); // Decode JWT to extract user information
+            console.log("User data:", data);
+            alert(`Welcome ${data.name}!`);
+        }
+
+        function initializeGoogleSignIn() {
+            google.accounts.id.initialize({
+                client_id: "YOUR_GOOGLE_CLIENT_ID", // Replace with your client ID
+                callback: handleCredentialResponse,
+            });
+
+            google.accounts.id.renderButton(
+                document.getElementById("google-login-button"), // HTML element to render the button
+                { theme: "outline", size: "large" } // Customization options
+            );
+        }
+    </script>
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color:  #2e572e; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+}
+
+.language img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.form-container {
+    padding: 20px;
+    background-color: #fff; /* Form container background color */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sign-in, .google-login button {
+    padding: 10px 20px;
+    background-color: #00a849ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-login {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.google-login img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.signup-link a {
+    color: #00a849;
+    text-decoration: none;
+}
+</style>
+<body onload="initializeGoogleSignIn()">
+    <div class="container">
+        <div class="header">
+            <h1>Contract Farming</h1>
+            <div class="language">
+                
+                <span>🌐 English</span>
+                <i class="arrow-down"></i>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>WELCOME DEAR USER!</h2>
+
+            <form>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile Number</label>
+                    <input type="tel" id="mobile-number" placeholder="Enter the registered mobile">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="password">
+                </div>
+
+               
+                <button type="submit" class="sign-in">Sign In</button>
+                
+                <div id="google-login-button" class="google-login"></div>
+                <p class="signup-link">NEW USER? <a href="Signup.html">SIGN UP</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jwt-decode/3.1.2/jwt-decode.min.js"></script>
+</body>
+</html> 
+
+

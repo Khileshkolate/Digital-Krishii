@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming - Soya Bean</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #32d224;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.product-card {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff; /* Background color for the text section */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-header h2 {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.product-header p {
+    font-size: 16px;
+    color: #888;
+}
+
+/* ... other styles for the product-info section ... */
+
+.buy-now {
+    /* ... button styles ... */
+    float: right; /* Position the button to the right */
+}
+
+</style>
+<body>
+
+    <header>
+        <div class="logo"><h1>Contract Farming</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Add Contract</a></li>
+                <li><a href="#">My Contracts</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Hinted search text">
+            <button><img src="search-icon.png" alt="Search"></button>
+        </div>
+        <div class="language">English</div>
+    </header>
+
+    <main>
+        <div class="product-card">
+            <img src="images.jpg" alt="Soya Bean" width="500" height="500">
+            <div class="price">
+                <p>1 Quintal</p>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div class="product-info">
+                <div class="product-header">
+                    <h2>Soya Bean</h2>
+                    <p>Kharif Crop</p>
+                </div>
+
+                <div class="rating">
+                    <h4>Contractor Rating And Reviews</h4>
+                    <p>5000 <span>per 100 Kg/Quintal</span></p>
+                </div>
+
+                <div class="details">
+                    <h4>Details</h4>
+                    <ul>
+                        <li>Breed: Hybrid</li>
+                        <li>Crop Duration: 4 months</li>
+                        <li>Seeding Time: Middle of Nov - Last of December</li>
+                    </ul>
+                </div>
+
+                <div class="description">
+                    <h4>Description</h4>
+                    <p>
+                        <span class="heading">Planting</span>
+                        Onion seeds can be planted in late July to September using the seed-to-seed method, or in September to October using the bulb-to-seed method.
+                    </p>
+                    <p>
+                        <span class="heading">Pollination</span>
+                        Onion seeds need to be pollinated, usually by honeybees, in clear, warm weather with temperatures between 65°F and 95°F.
+                    </p>
+                    <p>
+                        <span class="heading">Harvesting</span>
+                        Mature seeds are usually harvested by hand or machine from mid June to August of the following year.
+                    </p>
+                    <p>
+                        <span class="heading">Drying</span>
+                        The stalks are laid out on tarps and dried for 2-3 weeks.
+                    </p>
+                    <p>
+                        <span class="heading">Processing</span>
+                        The umbels are thrashed using combines, and the seed is then cleaned and processed.
+                    </p>
+                </div>
+
+                
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

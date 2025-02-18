@@ -1,0 +1,228 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <style>
+        /* General Body and Font Settings */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            background-color: #2e572e;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background-color: #f7f7f7;
+            border: 1px solid #2e572e;
+            text-align: center;
+            padding: 1.5rem;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .add-land-btn {
+            display: block;
+            margin: 1rem auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-land-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container {
+            display: none;
+            text-align: center;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .form-container input,
+        .form-container button {
+            display: block;
+            width: 90%;
+            margin: 0.5rem auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-container button {
+            background-color: #2e572e;
+            color: white;
+            border: none;
+        }
+
+        .form-container button:hover {
+            background-color: #3a6f3a;
+        }
+
+        /* New Section Styling */
+        .contact-section {
+            padding: 2rem;
+            background-color: #2e572e;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin: 0.5rem 0;
+        }
+
+        .contact-section a {
+            color: #ffc107;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="section-title">Land Available For Rent</div>
+            <button class="add-land-btn" onclick="showAddLandForm()">Add Land</button>
+
+            <div class="form-container" id="add-land-form">
+                <h3>Add Land Details</h3>
+                <input type="text" id="land-title" placeholder="Land Title (e.g., Haryana)">
+                <input type="text" id="land-area" placeholder="Land Area (e.g., 20 Acres)">
+                <input type="text" id="land-price" placeholder="Land Price (e.g., ₹50,000)">
+                <input type="file" id="land-image" accept="image/*">
+                <button onclick="addLand()">Submit</button>
+            </div>
+
+            <div class="cards" id="land-rent-section">
+                <div class="card">
+                    <img src="Pic/8.jpg" alt="Soybeans">
+                    <h4>Haryana</h4>
+                    <p class="availability">Currently Available</p>
+                    <p class="price">₹29 per KG</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Contact Section -->
+        <section class="contact-section">
+            <h3>Contact Us</h3>
+            <p>For inquiries or support, please contact us:</p>
+            <p>Email: <a href="mailto:support@contractfarming.com">support@contractfarming.com</a></p>
+            <p>Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+        </section>
+    </main>
+
+    <script>
+        function showAddLandForm() {
+            document.getElementById('add-land-form').style.display = 'block';
+        }
+
+        function addLand() {
+            const title = document.getElementById('land-title').value;
+            const area = document.getElementById('land-area').value;
+            const price = document.getElementById('land-price').value;
+            const imageInput = document.getElementById('land-image');
+
+            if (!title || !area || !price || !imageInput.files[0]) {
+                alert('Please fill in all fields and upload an image.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const newCard = document.createElement('div');
+                newCard.className = 'card';
+                newCard.innerHTML = `
+                    <img src="${e.target.result}" alt="${title}">
+                    <h4>${title}</h4>
+                    <p>${area}</p>
+                    <p class="price">${price}</p>
+                    <p class="availability">Currently Available</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                `;
+
+                document.getElementById('land-rent-section').appendChild(newCard);
+                document.getElementById('add-land-form').reset();
+                document.getElementById('add-land-form').style.display = 'none';
+            };
+
+            reader.readAsDataURL(imageInput.files[0]);
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+ 

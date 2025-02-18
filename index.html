@@ -1,0 +1,283 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <style>
+        /* Your CSS Styles (include all from the original code) */
+    </style>
+</head>
+<body>
+   
+    <section>
+        <div class="section-title">Products Available</div>
+        <div class="cards">
+            <div class="card" id="soybean-card">
+                <img src="Pic/9.jpeg" alt="Soybeans">
+                <h4>Soybeans</h4>
+                <p id="soybean-stock">Stock: 10 KG</p>
+                <div class="input-group">
+                    <input type="number" id="soybean-quantity" placeholder="Enter quantity" min="1">
+                    <button class="upload" onclick="proceedToBuy('soybean', 'soybean-stock', 'soybean-quantity')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function proceedToBuy(productId, stockId, inputId) {
+            const inputQuantity = document.getElementById(inputId).value;
+
+            if (inputQuantity === '' || isNaN(inputQuantity) || inputQuantity <= 0) {
+                alert('Please enter a valid quantity.');
+                return;
+            }
+
+            const quantity = parseInt(inputQuantity);
+            const availableStock = parseInt(document.getElementById(stockId).innerText.split(' ')[1]);
+
+            if (quantity > availableStock) {
+                alert(`Only ${availableStock} KG are available. Please enter a valid quantity.`);
+                return;
+            }
+
+            // Save the selected product and quantity in localStorage for use in the next page
+            localStorage.setItem('product', productId);
+            localStorage.setItem('quantity', quantity);
+
+            // Redirect to the details form page
+            window.location.href = 'form.html';
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming - Soybean Purchase</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e9f5e9, #c3e4c3);
+        }
+
+        header {
+            background-color: #2e572e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2e572e;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.8rem;
+            background-color: #2e572e;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1c3d1c;
+        }
+
+        /* Payment QR Section */
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-section img {
+            width: 200px;
+            height: 200px;
+            margin-top: 1rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #2e572e;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Buy Soybeans</h1>
+    </header>
+    <div class="container">
+        <div class="card" id="soybean-card">
+            <img src="9.jpeg" alt="Soybeans">
+            <h2>Soybeans - Available Stock: 10 KG</h2>
+            <label for="kg">Enter Quantity (KG):</label>
+            <input type="number" id="kg" name="kg" placeholder="Enter quantity in KG" min="1" max="10" required>
+            <button onclick="proceedToForm()">Buy Now</button>
+        </div>
+
+        <!-- Form Section -->
+        <div id="form-section" style="display: none;">
+            <h2 class="form-title">Customer Details</h2>
+            <form id="details-form" onsubmit="handleFormSubmit(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="pincode">Pincode:</label>
+                <input type="number" id="pincode" name="pincode" placeholder="Enter your pincode" required>
+
+                <button type="submit">Proceed to Receipt</button>
+            </form>
+        </div>
+
+         <!-- Payment Section -->
+        <div id="payment-section" style="display: none;">
+            <h2 class="form-title">Complete Your Payment</h2>
+            <div class="qr-section">
+                <p>Scan the QR Code to pay:</p>
+                <img src="payment.png" alt="QR Code">
+            </div>
+            <div class="success-message">Payment will be processed automatically.</div>
+        </div>
+
+        <!-- Receipt Section -->
+        <div id="receipt-section" style="display: none;">
+            <h2 class="form-title">Receipt</h2>
+            <p>Thank you for your purchase!</p>
+            <ul id="receipt-details"></ul>
+            <button onclick="printReceipt()">Print Receipt</button>
+            <button onclick="proceedToPayment()">Proceed to Payment</button>
+        </div>
+
+       
+    </div>
+
+    <footer>
+        <p>© 2024 Contract Farming</p>
+    </footer>
+
+    <script>
+        // Stock management
+        let stock = 10;
+
+        function proceedToForm() {
+            const kgInput = document.getElementById('kg').value;
+            if (kgInput > stock) {
+                alert("Not enough stock available!");
+            } else if (kgInput > 0) {
+                document.getElementById('soybean-card').style.display = 'none';
+                document.getElementById('form-section').style.display = 'block';
+                stock -= kgInput;
+                sessionStorage.setItem('kgPurchased', kgInput);
+            } else {
+                alert("Please enter a valid quantity.");
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const kgPurchased = sessionStorage.getItem('kgPurchased');
+            const details = Array.from(formData.entries()).map(([key, value]) => `<li><strong>${key}</strong>: ${value}</li>`).join('');
+            document.getElementById('receipt-details').innerHTML = `
+                <li><strong>Quantity:</strong> ${kgPurchased} KG</li>
+                ${details}
+            `;
+            document.getElementById('form-section').style.display = 'none';
+            document.getElementById('receipt-section').style.display = 'block';
+        }
+
+        function printReceipt() {
+            window.print();
+        }
+
+        function proceedToPayment() {
+            document.getElementById('receipt-section').style.display = 'none';
+            document.getElementById('payment-section').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

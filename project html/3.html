@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Farming Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Header Section */
+    .header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .search-bar {
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 15px;
+      width: 250px;
+    }
+
+    .banner {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .banner h2 {
+      font-size: 24px;
+      margin: 0 0 10px;
+    }
+
+    .banner p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* Main Content */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .availability {
+      color: green;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .pre-book {
+      color: orange;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Adding space between sections */
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Contract Farming</h1>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Add Contract</a>
+      <a href="#">My Contracts</a>
+      <a href="#">Orders</a>
+      <a href="#">Help</a>
+      <a href="#">About Us</a>
+      <a href="#">Profile</a>
+    </nav>
+    <input type="text" class="search-bar" placeholder="Search..." />
+  </header>
+
+  <section class="banner">
+    <h2>Get Assured Prices For Your Produce With Contract Farming</h2>
+    <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers.</p>
+  </section>
+
+  <div class="container">
+    <!-- Section 1 -->
+    <div class="section section-title">Lands Available For Contract Farming</div>
+    <div class="grid">
+      <div class="card">
+        <img src="land_haryana.jpg" alt="Haryana">
+        <h4>Haryana</h4>
+        <p>32 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_up.jpg" alt="Uttar Pradesh">
+        <h4>Uttar Pradesh</h4>
+        <p>12 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_mp.jpg" alt="Madhya Pradesh">
+        <h4>Madhya Pradesh</h4>
+        <p>10 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_gujarat.jpg" alt="Gujarat">
+        <h4>Gujarat</h4>
+        <p>30 Acres</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section section-title">Products Available</div>
+    <div class="grid">
+      <div class="card">
+        <img src="soybeans.jpg" alt="Soybeans">
+        <h4>Soybeans</h4>
+        <p class="availability">Currently Available</p>
+        <p class="price">29 per KG</p>
+      </div>
+      <div class="card">
+        <img src="wheat.jpg" alt="Wheat">
+        <h4>Wheat</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">39 per KG</p>
+      </div>
+      <div class="card">
+        <img src="bananas.jpg" alt="Bananas">
+        <h4>Bananas</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">29 per KG</p>
+      </div>
+      <div class="card">
+        <img src="sugarcane.jpg" alt="Sugarcane">
+        <h4>Sugarcane</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">49 per KG</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

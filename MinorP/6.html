@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming - Order Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* styles.css */
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #44c917;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.order-summary {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-summary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.order-summary li {
+    margin-bottom: 5px;
+}
+
+.product-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h4 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+</style>
+<body>
+
+    <header>
+        <div class="logo"><h1>Contract Farming</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Enlist Contract</a></li>
+                <li><a href="#">My Contracts</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Hinted search text">
+            <button><img src="search-icon.png" alt="Search"></button>
+        </div>
+        <div class="language">English</div>
+    </header>
+
+    <main>
+        <div class="order-summary">
+            <h2>DELIVERY ADDRESS</h2>
+            <ul>
+                <li>Raj Mahajan</li>
+                <li>D-114, East Kamla Nagar, Piplani, Bhopal</li>
+                <li>East Kamla Nagar Piplani</li>
+                <li>BHOPAL, MADHYA PRADESH 462041</li>
+            </ul>
+            <p>Add delivery instructions</p>
+
+            <h2>ORDER SUMMARY</h2>
+            <div class="product-item">
+                <img src="Pic/9.jpeg" alt="Onion Seeds">
+                <div class="product-details">
+                    <h4>Onion Seeds</h4>
+                    <ul>
+                        <li>Breed: Hybrid</li>
+                        <li>Crop Duration: 4 months</li>
+                        <li>Seeding Time: middle of nov - last of December</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>PAYMENT OPTIONS</h2>
+            <ul>
+                <li> * UPI</li>
+                <li> * Net Banking</li>
+            </ul>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming Formats</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Buttons for PDF links */
+        .pdf-button {
+            background-color: #0288D1;
+            color: white;
+            cursor: pointer;
+            padding: 14px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-button:hover {
+            background-color: #0277BD;
+        }
+
+        .pdf-link {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Style for each section */
+        .contract-section {
+            margin-bottom: 20px;
+        }
+        .upload{
+            border-radius: 5px;
+            /* border: none; */
+            
+        }
+        .upload-container {
+  text-align: center;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* text-align: center; */
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.upload-btn:hover {
+  background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contract Farming Formats</h1>
+
+        <!-- Market-Specification Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f1 (1).pdf" class="pdf-link" download>Market-Specification Contract (Download PDF)</a>
+            </button>
+            <p>This contract specifies the quality, quantity, and price at which the crops will be purchased by the buyer, ensuring market alignment.</p>
+            
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+        <!-- Resource-Providing Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f2.pdf" class="pdf-link" download>Resource-Providing Contract (Download PDF)</a>
+            </button>
+            <p>In this format, the buyer provides essential resources such as seeds, fertilizers, and technical guidance to the farmer for the production process.</p>
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+        <!-- Production-Management Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f3.pdf" class="pdf-link" download>Production-Management Contract (Download PDF)</a>
+            </button>
+            <p>This contract involves the buyer offering management assistance for the production process, ensuring that the product meets specific standards.</p>
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+        <!-- Land-Leasing Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f4.pdf" class="pdf-link" download>Land-Leasing Contract (Download PDF)</a>
+            </button>
+            <p>In this contract, the buyer leases land from the farmer for crop production, often providing resources or technical know-how for cultivation.</p>
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+        <!-- Buyback Agreement Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f5.pdf" class="pdf-link" download>Buyback Agreement Contract (Download PDF)</a>
+            </button>
+            <p>This contract guarantees that the buyer will purchase the entire output of the farmer's crop at a pre-agreed price, reducing market risk for the farmer.</p>
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+        <!-- Joint-Venture Contract -->
+        <div class="contract-section">
+            <button class="pdf-button">
+                <a href="f6.pdf" class="pdf-link" download>Joint-Venture Contract (Download PDF)</a>
+            </button>
+            <p>In a joint-venture contract, both the buyer and the farmer share the profits, risks, and responsibilities of the farming operation.</p>
+            <div class="button-group">
+                
+                <div class="upload-container">
+                    <label for="pdf-upload" class="upload-btn">Upload PDF</label>
+                    <input type="file" id="pdf-upload" accept=".pdf" onchange="handleFileUpload(event)">
+                  </div>
+                
+                  <script>
+                    function handleFileUpload(event) {
+                      const file = event.target.files[0];
+                      if (file) {
+                        alert(`You selected: ${file.name}`);
+                      }
+                    }
+                  </script>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

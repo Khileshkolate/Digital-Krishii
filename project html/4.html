@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<style>
+    /* styles.css */
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.product img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc; /* Add a border to the image */
+    background-color: #f0f0f0; /* Add a background color to the image container */
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #007bff;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.hero {
+    background-color: #23b75ad5;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    width: 30%;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.filter-item {
+    margin-bottom: 20px;
+}
+
+.products {
+    width: 70%;
+    padding: 20px;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+/* Add your own custom styles for colors, fonts, and layout */
+</style>
+<body>
+    <header>
+        <div class="logo">Contract Farming</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Add Contract</a></li>
+                <li><a href="#">My Contracts</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+        <div class="language">English</div>
+    </header>
+
+    <section class="hero">
+        <h2>Get Assured Prices For Your Produce With Contract Farming</h2>
+        <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+    </section>
+
+    <main>
+        <aside>
+            <h3>Filter</h3>
+            <div class="filter-item">
+                <h4>Product Type</h4>
+                <input type="text" placeholder="Search Product Type">
+            </div>
+            <div class="filter-item">
+                <h4>Price Range</h4>
+                <input type="number" placeholder="Min Price">
+                <input type="number" placeholder="Max Price">
+            </div>
+            <div class="filter-item">
+                <h4>Soil Type</h4>
+                <input type="text" placeholder="Search Soil Type">
+            </div>
+        </aside>
+        <section class="products">
+            <h2>Products Available</h2>
+            <div class="product">
+                <img src="soya-bean.jpg" alt="Soya Bean">
+                <div class="product-info">
+                    <h3>Soya Bean</h3>
+                    <p>35 Rs. per kg</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="wheat.jpg" alt="Wheat">
+                <div class="product-info">
+                    <h3>Wheat</h3>
+                    <p>35 Rs. per kg</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+</body>
+</html>

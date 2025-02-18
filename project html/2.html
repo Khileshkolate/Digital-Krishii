@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Products and Land for Rent</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden;
+      height: 230px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .availability {
+      color: green;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .pre-book {
+      color: #ff6600;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .second-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-title">Land for Rent</div>
+    <div class="grid">
+      <div class="card">
+        <img src="land_haryana.jpg" alt="Haryana">
+        <h4>Haryana</h4>
+        <p>32 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_up.jpg" alt="Uttar Pradesh">
+        <h4>Uttar Pradesh</h4>
+        <p>12 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_mp.jpg" alt="Madhya Pradesh">
+        <h4>Madhya Pradesh</h4>
+        <p>10 Acres</p>
+      </div>
+      <div class="card">
+        <img src="land_gujarat.jpg" alt="Gujarat">
+        <h4>Gujarat</h4>
+        <p>30 Acres</p>
+      </div>
+    </div>
+
+    <div class="section-title">Products Available</div>
+    <div class="second-grid">
+      <div class="card">
+        <img src="soybeans.jpg" alt="Soybeans">
+        <h4>Soybeans</h4>
+        <p class="availability">Currently Available</p>
+        <p class="price">29 per KG</p>
+      </div>
+      <div class="card">
+        <img src="wheat.jpg" alt="Wheat">
+        <h4>Wheat</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">39 per KG</p>
+      </div>
+      <div class="card">
+        <img src="bananas.jpg" alt="Bananas">
+        <h4>Bananas</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">29 per KG</p>
+      </div>
+      <div class="card">
+        <img src="sugarcane.jpg" alt="Sugarcane">
+        <h4>Sugarcane</h4>
+        <p class="pre-book">Pre Booking</p>
+        <p class="price">49 per KG</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

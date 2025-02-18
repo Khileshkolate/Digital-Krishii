@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.payment-container {
+    width: 400px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method {
+    margin-bottom: 20px;
+}
+
+.payment-method label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.card-details .card-number,
+.card-details .card-expiry,
+.card-details .card-cvv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-details input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pay-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.privacy-policy {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+.payment-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1  0.1);
+    border: 1px solid #ccc; /* Add border here */
+}
+.payment-container {
+    border: 3px dashed #007bff;
+}
+</style>
+<body>
+    <div class="payment-container">
+        <h2>Payment</h2>
+
+        <div class="payment-method">
+            <label for="card">
+                <input type="radio" name="payment" id="card" checked>
+                Card
+            </label>
+            <label for="bank-transfer">
+                <input type="radio" name="payment" id="bank-transfer">
+                Bank Transfer
+            </label>
+            <label for="cryptocurrency">
+                <input type="radio" name="payment" id="cryptocurrency">
+                Cryptocurrency
+            </label>
+        </div>
+
+        <div class="card-details">
+            <img src="visa-logo.png" alt="Visa Logo">
+            <div class="card-number">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="5399 0000 0000 0000">
+            </div>
+
+            <div class="card-expiry">
+                <label for="expiry-date">Expiration Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+            </div>
+
+            <div class="card-cvv">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="***">
+            </div>
+
+            <div class="save-card">
+                <input type="checkbox" id="save-card">
+                <label for="save-card">Save card details</label>
+            </div>
+        </div>
+
+        <button type="submit" class="pay-button">Pay USD250.28</button>
+
+        <p class="privacy-policy">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+    </div>
+</body>
+</html>

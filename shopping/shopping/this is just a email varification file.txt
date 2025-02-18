@@ -1,0 +1,39 @@
+<?php
+session_start();
+include('connection.php');
+$product = $_POST['product'];
+$productcomments = $_POST['productcomments'];
+$name = $_POST['name'];
+$address = $_POST['address'];
+$age = $_POST['age'];
+$delivery = $_POST['delivery'];
+mysql_query("INSERT INTO orderform(product, productcomments, name, address, age, delivery)VALUES('$product', '$productcomments', '$name','$address', '$age', '$delivery')");
+header("location: google.com");
+
+$to      = 'j_bussey@live.co.uk';
+$subject = 'Order';
+$message = 'Product: ' . $product . '<br /> Product Comments: ' . $productcomments . '<br /> ';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+mysql_close($con);
+?>
+-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+<?php
+$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+?>
+---------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+$message = 'Product: ' . $product . '<br /> Product Comments: ' . $productcomments . '<br /> ';

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <style>
+        /* General Body and Font Settings */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #2e572e;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-options input {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .header-options button {
+            margin-right: 0.5rem;
+            background-color: #ffffff;
+            color: #2e572e;
+            border: 1px solid #2e572e;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .header-options button:hover {
+            background-color: #2e572e;
+            color: white;
+        }
+
+        .header-options select {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5rem;
+            background-color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 87, 46, 0.8), rgba(46, 87, 46, 0.8)), url('hero-background.jpg');
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0 0 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Section Titles */
+        .contracts h3, .lands h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            background-color: #2e572e;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        /* Contracts and Lands Sections */
+        .contracts, .lands {
+            background-color: #ffffff;
+            padding: 2rem;
+            margin: 1rem auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Individual Cards */
+        .card {
+            background-color: #f8f8f8;
+            border: 1px solid #cccccc;
+            text-align: center;
+            padding: 1rem;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .card h4 {
+            margin: 0.5rem 0;
+            background-color: #2e572e;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .card p {
+            color: #555555;
+            font-size: 0.9rem;
+            background-color: #e0ffe0;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Contract Farming</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Become a Contract Farmer</a>
+                <a href="#">Become a Buyer</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+            </nav>
+            <div class="header-options">
+                <input type="search" placeholder="Hinted search text">
+                <form action="login.php" method="GET">
+                    <input type="submit" class="btn" value="Farmer Login" name="signUp">
+                </form>
+                    </a>
+                <button>Buyer Login</button>
+                <select>
+                    <option>English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Get Assured Prices For Your Produce With Contract Farming</h2>
+            <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+        </section>
+        <section class="contracts">
+            <h3>Contracts For Farmers</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="barley.jpg" alt="Barley Seeds">
+                    <h4>Barley Seeds</h4>
+                    <p>32 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="onion.jpg" alt="Onion Seeds">
+                    <h4>Onion Seeds</h4>
+                    <p>12 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="poultry.jpg" alt="Poultry Farm">
+                    <h4>Poultry Farm</h4>
+                    <p>10 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="fish.jpg" alt="Fish Farming">
+                    <h4>Fish Farming</h4>
+                    <p>30 Acres</p>
+                </div>
+            </div>
+        </section>
+        <section class="lands">
+            <h3>Lands Available For Contract Farming</h3>
+            <div class="cards">
+                <div class="card">
+                    <img src="haryana.jpg" alt="Haryana">
+                    <h4>Haryana</h4>
+                    <p>32 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="up.jpg" alt="Uttar Pradesh">
+                    <h4>Uttar Pradesh</h4>
+                    <p>12 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="mp.jpg" alt="Madhya Pradesh">
+                    <h4>Madhya Pradesh</h4>
+                    <p>10 Acres</p>
+                </div>
+                <div class="card">
+                    <img src="gujarat.jpg" alt="Gujarat">
+                    <h4>Gujarat</h4>
+                    <p>30 Acres</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

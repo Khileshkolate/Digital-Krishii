@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #1a8321;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .search button {
+            padding: 10px 20px;
+            background-color: #0e843d;
+            color: #fff;
+            border-color: #fff;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 4px;
+        }
+
+        .search button i {
+            font-size: 18px;
+        }
+
+        .hero-section {
+            background: url('https://example.com/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            background-color: #00a849;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .content-section {
+            display: flex;
+            padding: 20px;
+        }
+
+        .filter-section {
+            width: 30%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .filter-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .filter-item {
+            margin-bottom: 15px;
+        }
+
+        .filter-item label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .filter-item input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contracts-for-farmers {
+            flex: 1;
+        }
+
+        .contracts-for-farmers h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-info li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .fa-heart {
+            color: red;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .upload{
+            margin-left: 450px;
+            padding: 5px;
+            border-radius: 5px;
+            /* background-color: #0e843d;   */
+            background-color: #fff;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Contract Farming</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Add Land for Contract</a></li>
+                <li><a href="#">Enlist Land For Selling</a></li>
+                <li><a href="#">Add Product for Sale</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Hinted search text">
+            <button> Search </button>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="hero-section" >
+            <h1>Get Assured Prices For Your Produce With Contract Farming</h1>
+            <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+        </div>
+
+        <div class="content-section">
+            
+            <section class="filter-section">
+                <h2>Filter</h2>
+                <div class="filter-item">
+                    <label for="crop-type">Crop Type</label>
+                    <input type="text" id="crop-type" placeholder="Search Crop Type">
+                </div>
+                <div class="filter-item">
+                    <label for="area-of-land">Area of Land</label>
+                    <input type="text" id="area-of-land" placeholder="Search Area of Land">
+                </div>
+                <div class="filter-item">
+                    <label for="soil-type">Soil Type</label>
+                    <input type="text" id="soil-type" placeholder="Search Soil Type">
+                </div>
+                <div class="search">
+                    <button>Search</button>
+                </div>
+            </section>
+
+            <section class="contracts-for-farmers">
+                <h2>Contracts For Farmers</h2>
+
+                <div class="product-card">
+                    <img src="Pic/10.jpg" alt="Wheat">
+                    <div class="product-info">
+                        <h3>Wheat</h3>
+                        <ul>
+                            <li>Type of Crop: Wheat</li>
+                            <li>Area of Land: 32 Acres</li>
+                            <li>Preferred Soil Type: Black, Red</li>
+                        </ul>
+                        <div class="button-group">
+                            <button class="upload"><a href="8.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Pic/2.jpg" alt="Onion Seeds">
+                    <div class="product-info">
+                        <h3>Onion</h3>
+                        <ul>
+                            <li>Type of Crop: Onion</li>
+                            <li>Area of Land: 15 Acres</li>
+                            <li>Preferred Soil Type: Loamy</li>
+                        </ul>
+                        <div class="button-group">
+                            <button class="upload"><a href="#">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Pic/10.jpg" alt="Wheat">
+                    <div class="product-info">
+                        <h3>Wheat</h3>
+                        <ul>
+                            <li>Type of Crop: Wheat</li>
+                            <li>Area of Land: 32 Acres</li>
+                            <li>Preferred Soil Type: Black, Red</li>
+                        </ul>
+                        <div class="button-group">
+                            <button class="upload"><a href="#">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="Pic/2.jpg" alt="Onion Seeds">
+                    <div class="product-info">
+                        <h3>Onion</h3>
+                        <ul>
+                            <li>Type of Crop: Onion</li>
+                            <li>Area of Land: 15 Acres</li>
+                            <li>Preferred Soil Type: Loamy</li>
+                        </ul>
+                        <div class="button-group">
+                            <button class="upload"><a href="#">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           
+        </div>
+    </main>
+</body>
+</html>

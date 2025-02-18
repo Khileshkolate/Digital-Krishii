@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fill Contract Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+,<style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #2b5e2c;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.language-icon {
+  font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #3d7c3f;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.content {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contract-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contract-text {
+  background-color: #e8e8e8;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.negotiate-btn {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  text-align: center;
+}
+
+.action-btn {
+  background-color: #2b5e2c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><h1>Contract Farming</h1></div>
+      <div class="search-bar">
+        <input type="text" placeholder="Hinted search text">
+      </div>
+      <div class="language-icon">🌐 English</div>
+    </nav>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Add Land for Contract</a>
+      <a href="#">Add Land for Selling</a>
+      <a href="#">Add Product for Sale</a>
+      <a href="#">Help</a>
+      <a href="#">About Us</a>
+      <a href="#">Profile</a>
+    </div>
+  </header>
+  <main class="content">
+    <h1 class="title">Fill Contract Details</h1>
+    <section class="contract-details">
+      <div class="contract-text">
+        <p>Seed growing contract</p>
+        <p><strong>Onion (freelander)</strong></p>
+        <p>Details of the agreement...</p>
+        <p><button class="btn negotiate-btn">Negotiate Details</button></p>
+        <!-- Add all text content here as needed -->
+      </div>
+      <div class="action-buttons">
+        <button class="btn action-btn">Apply For Contract</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-section {
+    display: flex;
+    margin: 20px;
+}
+
+.filter-section {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+.filter-item {
+    margin-bottom: 10px;
+}
+
+.contracts-for-farmers {
+    flex: 1;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-info li {
+    margin-bottom: 5px;
+}
+</style>
+<body>
+
+    <header>
+        <div class="logo">Contract Farming</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Add Land for Contract</a></li>
+                <li><a href="#">Enlist Land For Selling</a></li>
+                <li><a href="#">Add product for sale</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Hinted search text">
+            <button><img src="search-icon.png" alt="Search"></button>
+        </div>
+        <div class="language">English</div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <h1>Get Assured Prices For Your Produce With Contract Farming</h1>
+            <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+        </div>
+
+        <div class="content-section">
+            <aside class="filter-section">
+                <h2>Filter</h2>
+                <div class="filter-item">
+                    <label for="crop-type">Crop Type</label>
+                    <input type="text" id="crop-type" placeholder="Search Crop Type">
+                </div>
+                <div class="filter-item">
+                    <label for="area-of-land">Area of Land</label>
+                    <input type="text" id="area-of-land" placeholder="Search Area of Land">
+                </div>
+                <div class="filter-item">
+                    <label for="soil-type">Soil Type</label>
+                    <input type="text" id="soil-type" placeholder="Search Soil Type">
+                </div>
+            </aside>
+
+            <section class="contracts-for-farmers">
+                <h2>Contracts For Farmers</h2>
+                <div class="product-card">
+                    <img src="wheat-seeds.jpg" alt="Wheat Seeds">
+                    <div class="product-info">
+                        <h3>Wheat</h3>
+                        <ul>
+                            <li>Type of Crop: Wheat</li>
+                            <li>Area of Land: 32 Acres</li>
+                            <li>Preferred Soil Type: Black, Red</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="onion-seeds.jpg" alt="Onion Seeds">
+                    <div class="product-info">
+                        <h3>Onion Seeds</h3>
+                        <ul>
+                            <li>Type of Crop: Onion</li>
+                            <li>Total land required: [Total land required]</li>
+                            <li>Preferred Soil Type: [Preferred Soil Type]</li>
+                            <li>Preferred Soil Type: [Preferred Soil Type]</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>

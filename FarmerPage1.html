@@ -1,0 +1,522 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Farming</title>
+    <style>
+        /* General Body and Font Settings */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #2e572e; /* Theme color */
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-options input {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .header-options button {
+            margin-right: 0.5rem;
+            background-color: #ffffff;
+            color: #2e572e;
+            border: 1px solid #2e572e;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .header-options button:hover {
+            background-color: #2e572e;
+            color: white;
+        }
+
+        .header-options select {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5rem;
+            background-color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 87, 46, 0.8), rgba(46, 87, 46, 0.8)), url('hero-background.jpg');
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin: 0 0 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            background-color: #2e572e; /* Theme color */
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Individual Cards */
+        .card {
+            background-color: #f7f7f7; /* Light background for contrast */
+            border: 1px solid #2e572e; /* Card border in theme color */
+            text-align: center;
+            padding: 1.5rem;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .card h4 {
+            margin: 1rem 0;
+            background-color: #2e572e; /* Theme color for card headers */
+            color: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #555555;
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background-color: #e0ffe0; /* Light green background for descriptions */
+            border-radius: 5px;
+        }
+
+        .price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin: 0.5rem 0;
+        }
+
+        .availability {
+            color: green;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .pre-book {
+            color: #ff6600;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Buttons Style */
+        .button-group {
+            margin-top: 15px;
+            
+        }
+
+        .button-group a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #2e572e; /* Theme color for buttons */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button-group a:hover {
+            background-color: #5a9a5a; /* Lighter green for hover */
+            transform: translateY(-3px);
+        }
+
+        .button-group a:active {
+            transform: translateY(0);
+        }
+
+        /* Additional Styles for Profile */
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .profile-info p {
+            margin: 0;
+            margin-bottom: 13px;
+        }
+
+        .logout-btn {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+ 
+        .logout-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+   
+}
+
+.search button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+   
+}
+
+    </style>
+</head>
+
+<body>
+     <header class="header">
+        <div class="container">
+            <h1>Contract Farming</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Become a Contract Farmer</a>
+                <a href="#">Become a Buyer</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+            </nav>
+            <div class="profile">
+                <div class="profile-info">
+                    <p>Welcome, Farmer Khilesh</p>
+                    <a href="Second.html" class="logout-btn">Logout</a>
+                </div>
+                <img src="farmer logo.png" alt="Farmer Profile" class="profile-pic">
+            </div>
+        </div>
+    </header> 
+    <main>
+        <section class="hero">
+            <h2>Get Assured Prices For Your Produce With Contract Farming</h2>
+            <p>Contract farming offers a strategic solution by establishing pre-agreed terms between farmers and buyers, ensuring a stable and reliable market for agricultural produce.</p>
+        </section>
+        <section>
+            <div class="section-title">Contracts For Farmers</div>
+            <div class="cards">
+                <div class="card">
+                    <img src="Pic/Pic1.jpg" alt="Barley Seeds">
+                    <h4>Barley Seeds</h4>
+                    <p>32 Acres</p>
+                    <div class="button-group">
+                        <a href="Filter.html">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/2.jpg" alt="Onion Seeds">
+                    <h4>Onion Seeds</h4>
+                    <p>12 Acres</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/3.jpg" alt="Poultry Farm">
+                    <h4>Poultry Farm</h4>
+                    <p>10 Acres</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/4.jpeg" alt="Fish Farming">
+                    <h4>Fish Farming</h4>
+                    <p>30 Acres</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-title">Lands Available For Contract Farming</div>
+            <div class="cards">
+                <div class="card">
+                    <img src="Pic/5.jpg" alt="Barley Seeds">
+                    <h4>Maharastra</h4>
+                    <p>32 Acres</p>
+                    <p class="price">₹50,000</p>
+                    <p class="availability">Available</p>
+                    <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/6.webp" alt="Onion Seeds">
+                    <h4>Harayana</h4>
+                    <p>12 Acres</p>
+                    <p class="price">₹40,000</p>
+                    <p class="pre-book">Pre-book</p>
+                    <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/7.webp" alt="Poultry Farm">
+                    <h4>Madhya Pradesh</h4>
+                    <p>10 Acres</p>
+                    <p class="price">₹1,00,000</p>
+                    <p class="availability">Available</p>
+                    <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/8.jpg" alt="Fish Farming">
+                    <h4>Gujrat</h4>
+                    <p>30 Acres</p>
+                    <p class="price">₹75,000</p>
+                    <p class="availability">Available</p>
+                    <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section-title">Land Available For Rent</div>
+            <div class="button-group">
+                <a href="AddLand.html">Add Land</a>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="Pic/8.jpg" alt="Soybeans">
+                    <h4>Harayana</h4>
+                    <p class="availability">Currently Available</p>
+                    <p class="price">29 per KG</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/7.webp" alt="Wheat">
+                    <h4>Gujrat</h4>
+                    <p class="pre-book">Pre Booking</p>
+                    <p class="price">39 per KG</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/6.webp" alt="Bananas">
+                    <h4>Maharastra</h4>
+                    <p class="pre-book">Pre Booking</p>
+                    <p class="price">29 per KG</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Pic/5.jpg" alt="Sugarcane">
+                    <h4>Madhya Pradesh</h4>
+                    <p class="pre-book">Pre Booking</p>
+                    <p class="price">49 per KG</p>
+                    <div class="button-group">
+                        <a href="#">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <section>
+              <div class="section-title">Products Available</div>
+              <div class="cards">
+                  <div class="card">
+                      <img src="Pic/9.jpeg" alt="Soybeans">
+                      <h4>Soybeans</h4>
+                      <p class="availability">Currently Available</p>
+                      <p class="price">29 per KG</p>
+                      <div class="button-group">
+                        <a href="index.html">Buy Now</a>
+                    </div>
+                  </div>
+                  <!-- <div class="card">
+                      <img src="Pic/10.jpg" alt="Wheat">
+                      <h4>Wheat</h4>
+                      <p class="pre-book">Pre Booking</p>
+                      <p class="price">Stock: 49 KG</p>
+                      <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                  </div> -->
+
+                  <div class="card" id="wheat-card">
+                    <img src="Pic/10.jpg" alt="Wheat">
+                    <h4>Wheat</h4>
+                    <p class="pre-book">Pre Booking</p>
+                    <p class="price">₹39 per KG</p>
+                    <p class="stock">Stock: <span id="wheat-stock">49</span> KG</p>
+                    <div class="button-group">
+                        <input type="number" id="wheat-quantity" placeholder="Enter quantity" min="1" max="49">
+                        <button onclick="buyProduct('wheat')">Buy Now</button>
+                    </div>
+                </div>
+                  <div class="card">
+                      <img src="Pic/11.jpg" alt="Bananas">
+                      <h4>Bananas</h4>
+                      <p class="pre-book">Pre Booking</p>
+                      <p class="price">29 per KG</p>
+                      <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                  </div>
+                  <div class="card">
+                      <img src="Pic/12.webp" alt="Sugarcane">
+                      <h4>Sugarcane</h4>
+                      <p class="pre-book">Pre Booking</p>
+                      <p class="price">49 per KG</p>
+                      <div class="button-group">
+                        <a href="#">Buy Now</a>
+                    </div>
+                  </div>
+              </div>
+    </main>
+    <script>
+        function buyProduct(product) {
+            // Get stock element and current stock
+            const stockElement = document.getElementById(`${product}-stock`);
+            const quantityInput = document.getElementById(`${product}-quantity`);
+            const cardElement = document.getElementById(`${product}-card`);
+    
+            // Parse current stock and input quantity
+            let currentStock = parseInt(stockElement.innerText);
+            let quantityToBuy = parseInt(quantityInput.value);
+    
+            // Validation
+            if (isNaN(quantityToBuy) || quantityToBuy <= 0) {
+                alert("Please enter a valid quantity.");
+                return;
+            }
+    
+            if (quantityToBuy > currentStock) {
+                alert("Quantity exceeds available stock.");
+                return;
+            }
+    
+            // Update stock
+            currentStock -= quantityToBuy;
+            stockElement.innerText = currentStock;
+    
+            // Clear the input field
+            quantityInput.value = "";
+    
+            // Check if stock is depleted
+            if (currentStock <= 0) {
+                alert(`${product.charAt(0).toUpperCase() + product.slice(1)} is out of stock!`);
+                cardElement.remove();
+            }
+        }
+    </script>
+    
+</body>
+
+</html> 
+
+
+
+
